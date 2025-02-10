@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - TaskAI</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <style>
+        .register-container {
+            max-width: 400px;
+            margin: 100px auto;
+            background: rgba(0, 0, 0, 0.85);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px #6a82fb;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .register-container h2 {
+            text-align: center;
+            color: #6a82fb;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            outline: none;
+        }
+
+        .btn {
+            width: 100%;
+            background: #6a82fb;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #9d9dff;
+            transform: scale(1.05);
+        }
+
+        .link {
+            display: block;
+            text-align: center;
+            color: #fff;
+            margin-top: 15px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .link:hover {
+            color: #6a82fb;
+        }
+    </style>
+</head>
+<body>
+    <div class="register-container">
+        <h2>Create Account - TaskAI</h2>
+        <form action="/register" method="POST">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="btn">Register</button>
+        </form>
+        <a href="/login" class="link">Already have an account? Login here.</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="task-container">
+        <h2>Your Tasks</h2>
+        <ul id="task-list">
+            <!-- Tasks will be dynamically loaded here -->
+        </ul>
+        <form action="/add-task" method="POST">
+            <input type="text" name="task" placeholder="Enter a new task" required>
+            <button type="submit">Add Task</button>
+        </form>
+        <a href="/download/txt" class="download-btn">Download as Text</a>
+        <a href="/download/pdf" class="download-btn">Download as PDF</a>
+        <p><a href="/logout">Logout</a></p>
+    </div>
+</body>
+</html>
+> 
